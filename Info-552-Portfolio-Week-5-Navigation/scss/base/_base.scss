@@ -1,0 +1,120 @@
+/* =============
+    Base
+============= */
+body{
+    background-color: var(--gray);
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+
+    li{
+        list-style: none;
+    }
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". content .";
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+
+    .content-grid-item{
+        background-color: var(--white);
+        grid-area: content;
+    }
+}
+
+#main-content-grid{
+    margin-top: 220px;
+    ;
+    @include lg{
+        display: grid;
+        grid-template-columns: 60% auto;
+        gap: 16px;
+    }
+
+    @include xl{
+        grid-template-columns: 70% auto;
+    }
+
+}
+
+
+#main-content-right{
+
+    border: 1px solid var(--gray);
+    margin: 150px 16px 16px;
+    padding: 16px;
+    text-align: center;
+    font-size: rem-calc(14);
+
+    // img{
+    //     margin-top: -50px;
+    //     width: 150px;
+    // }
+
+    #profile-pic{
+        background-image: url("../img/profile.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 200px;
+        border-radius: 100%;
+        height: 200px;
+        margin: -65px auto 0;
+    }
+
+    h2{
+        padding-bottom: 16px;
+       margin-top: 16px;
+        font-size: rem-calc(14);
+        letter-spacing: 2px;
+    }
+
+    p{
+        line-height: 1.5;
+    }
+
+    .social-icons{
+        display: flex;
+        justify-content: center;
+
+        li{
+
+            margin: 0 16px;
+
+            // love // hate
+            a:link, a:visited{
+                color: var(--black);
+                text-decoration: none;
+                font-size: rem-calc(20);
+                transition: 0.25s;
+            }
+
+            a:hover, a:active{
+                color: var(--green);
+            }
+        }
+    }
+
+    #view-portfolio-btn:link, #view-portfolio-btn:visited{
+        color: var(--darkGreen);
+        display: inline-block;
+        margin-top: 24px;
+        transition: 0.25s;
+    }
+
+    #view-portfolio-btn:hover, #view-portfolio-btn:active{
+        color: var(--black);
+    }
+
+}
