@@ -13,9 +13,9 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
-  --green: #74ccd1;
-  --darkGreen: #2B797C;
-  --gray: #f0f0f0;
+  --green: #a5f7bb;
+  --darkGreen: #02b65f;
+  --gray: #fedffb;
   --lightGray: #fafafa;
   --charcoal: #404040;
 }
@@ -337,7 +337,7 @@ template {
     Base
 ============= */
 body {
-  background-color: var(--gray);
+  background-color: var(--darkGreen);
 }
 
 p {
@@ -651,7 +651,7 @@ header a:link, header a:visited {
   letter-spacing: 0.125rem;
 }
 header a:hover, header a:active {
-  color: var(--darkGreen);
+  color: var(--green);
 }
 header p {
   font-size: 0.875rem;
